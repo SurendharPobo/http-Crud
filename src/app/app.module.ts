@@ -19,6 +19,8 @@ import {
 } from '@abacritt/angularx-social-login';
 import { GoogleLoginProvider } from '@abacritt/angularx-social-login';
 import { SocialComponent } from './Components/social/social.component';
+import { HomeComponent } from './Components/home/home.component';
+import { CardComponent } from './Components/card/card.component';
 
 
 @NgModule({
@@ -29,7 +31,9 @@ import { SocialComponent } from './Components/social/social.component';
     RegisterComponent,
     EditComponent,
     ChangepasswordComponent,
-    SocialComponent
+    SocialComponent,
+    HomeComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
@@ -49,11 +53,11 @@ import { SocialComponent } from './Components/social/social.component';
         providers: [
           {
             id: GoogleLoginProvider.PROVIDER_ID,
-            provider: new GoogleLoginProvider('1093753095943-ijdbj9b6u768fb0flk4fl9q3uih5av4r.apps.googleusercontent.com') // your client id
+            provider: new GoogleLoginProvider('1093753095943-ijdbj9b6u768fb0flk4fl9q3uih5av4r.apps.googleusercontent.com')
           },
           {
             id: FacebookLoginProvider.PROVIDER_ID,
-            provider: new FacebookLoginProvider('834637287977514'),
+            provider: new FacebookLoginProvider('2962666547202269'),
           },
         ]
       }as SocialAuthServiceConfig,

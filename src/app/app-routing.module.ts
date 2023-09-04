@@ -6,6 +6,7 @@ import { RegisterComponent } from './Components/register/register.component';
 import { EditComponent } from './Components/edit/edit.component';
 import { ChangepasswordComponent } from './Components/changepassword/changepassword.component';
 import { SocialComponent } from './Components/social/social.component';
+import { CardComponent } from './Components/card/card.component';
 
 const routes: Routes = [
   {
@@ -36,6 +37,10 @@ const routes: Routes = [
   {
     path:'social',
     component:SocialComponent
+  },
+  {
+    path:'cart',
+    component:CardComponent
   }
 ];
 

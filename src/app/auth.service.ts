@@ -48,4 +48,9 @@ export class AuthService {
   }
   //#endregion UsersAPI calles
 
+
+  GetCartOrderList() {
+    return this._http.get(environment.URL + 'Booking/get-cart-list');
+  }
+
 }

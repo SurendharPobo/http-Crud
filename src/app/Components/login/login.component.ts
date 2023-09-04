@@ -19,7 +19,7 @@ export class LoginComponent implements OnInit {
   loginForm: FormGroup;
   submit: boolean = false;
   userModel:User;
-  isLoggedin?: boolean;
+  isLoggedin: boolean;
 
   constructor(
     private _authservice: AuthService,
@@ -34,7 +34,6 @@ export class LoginComponent implements OnInit {
       password: ['', Validators.required],
     });
     this._SocialAuthService.authState.subscribe((user) => {
-      console.log(this.isLoggedin)
       if(user!=null){
         this.isLoggedin = user != null;
         this._router.navigateByUrl('/social');
@@ -61,7 +60,6 @@ export class LoginComponent implements OnInit {
           if (response.Status === true && response.Item != null && response.Item.User != null) {
             localStorage.setItem('token', response.Item['Token']);
             localStorage.setItem('usertype', response.Item.User.Role);
-            console.log(response)
             this.userModel = new User();
             this.userModel.Id = response.Item.User['Id'],
             this.userModel.Name = response.Item.User['Name'],

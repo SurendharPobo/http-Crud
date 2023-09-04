@@ -1,0 +1,9 @@
+<div *ngIf="isLoggedin === true">
+    <div class="container-fluid">
+        <img src="{{socialUser.photoUrl}}"> 
+        <p>First Name: <b> {{socialUser.firstName}}</b></p>
+        <p>Last Name: <b> {{socialUser.lastName}}</b></p>
+        <p>Email Id: <b> {{socialUser.email}}</b></p>
+    </div>
+    <button type="button" (click)="logOut()" class="btn btn-primary">Log Out</button>
+</div>

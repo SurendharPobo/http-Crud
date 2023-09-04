@@ -38,12 +38,7 @@
         </div>
         <div>
             <button (click)="register()" class="btn btn-primary mt-4">Register</button>
+            <button routerLink="/login" class="btn btn-primary mt-4 mx-2">Login</button>
         </div>
     </form>
-</div>
-
-
-<hr>
-<div *ngFor="let user of data">
-    <p><b>Name :</b>{{user.name}}</p>
 </div>

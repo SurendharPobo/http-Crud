@@ -5,6 +5,7 @@ import { LoginComponent } from './Components/login/login.component';
 import { RegisterComponent } from './Components/register/register.component';
 import { EditComponent } from './Components/edit/edit.component';
 import { ChangepasswordComponent } from './Components/changepassword/changepassword.component';
+import { SocialComponent } from './Components/social/social.component';
 
 const routes: Routes = [
   {
@@ -13,7 +14,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: '/register',
+    redirectTo: '/login',
     pathMatch: "full"
   },
   {
@@ -31,6 +32,10 @@ const routes: Routes = [
   {
     path:'changepassword',
     component:ChangepasswordComponent
+  },
+  {
+    path:'social',
+    component:SocialComponent
   }
 ];
 
